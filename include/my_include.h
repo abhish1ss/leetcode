@@ -6,4 +6,6 @@
 
 
 
-#define PRINT_LOG(...)    fprintf(stderr, "%s|%d|%s|%s\n", __FILE__, __LINE__, __func__, __VA_ARGS__); 
+#define PRINT_LOG(...)           \
+        char argString[1024]; sprintf(argString, __VA_ARGS__);    \
+        fprintf(stderr, "%s|%d|%s| [%s]\n", __FILE__, __LINE__, __func__, argString); 
