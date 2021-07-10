@@ -5,7 +5,8 @@
 #include<string.h>
 
 
+char argString[1024] = ""; 
 
 #define PRINT_LOG(...)           \
-        char argString[1024]; sprintf(argString, __VA_ARGS__);    \
-        fprintf(stderr, "%s|%d|%s| [%s]\n", __FILE__, __LINE__, __func__, argString); 
+        sprintf(argString, __VA_ARGS__);    \
+        fprintf(stderr, "%s|%d|%s|%s\n", __FILE__, __LINE__, __func__, argString); 
