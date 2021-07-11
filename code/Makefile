@@ -1,7 +1,6 @@
 CFLAGS=-fsanitize=address
 OUTPUT_FILE=$(shell (echo $(FILE) | cut -d '.' -f 1))
 
-
 all:
 	make clean
 	make build
