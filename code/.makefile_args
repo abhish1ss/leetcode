@@ -1,0 +1,3 @@
+#FS is used enabling the -fsanitize=address 
+FS=1
+FILE=Valid_Parentheses.c
